@@ -8,7 +8,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: 33a2e5754c3ebd03595d392bb33f24f0c9e98a06
+    secure: b5bb11911345159ec5dee9c9fc57a828d52633f1
   file:
   - _build/Sample.pdf
   skip_cleanup: true
