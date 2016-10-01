@@ -9,10 +9,9 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: [YOUR KEY]
+    secure: 33a2e5754c3ebd03595d392bb33f24f0c9e98a06
   file:
-  - _build/your_file_1.pdf
-  - _build/your_file_2.pdf
+  - _build/Sample.pdf
   skip_cleanup: true
   on:
     tags: true
