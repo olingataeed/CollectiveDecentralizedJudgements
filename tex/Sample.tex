@@ -23,8 +23,10 @@
 
 \usepackage{blindtext} % Package to generate dummy text throughout this template 
 %\usepackage[utf8]{inputenc} % Package for unicode characters
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{newunicodechar}
+\newunicodechar{ℝ}{\mathbb{R}}
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
@@ -66,12 +68,11 @@
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
-\DeclareUnicodeCharacter{0110}{\dash}
 \setlength{\droptitle}{-4\baselineskip} % Move the title up
 
 \pretitle{\begin{center}\Huge\bfseries} % Article title formatting
 \posttitle{\end{center}} % Article title closing formatting
-\title{Smart \dash AO} % Article title
+\title{Smart $ℝ$ AO} % Article title
 \author{%
 \textsc{Prophet Daniel}\thanks{A thank you or further information} \\[1ex] % Your name
 \normalsize University of Nicosia \\ % Your institution
