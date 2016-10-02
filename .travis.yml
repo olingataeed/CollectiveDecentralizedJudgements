@@ -6,6 +6,8 @@ before_install:
 script:
 - mkdir _build
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/Sample.tex
+- bibtex _build/Sample
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/Sample.tex
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/Sample.tex
 deploy:
   provider: releases
