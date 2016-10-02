@@ -1,140 +1,181 @@
-% simple.tex - A simple article to illustrate document structure.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Andrew Roberts - June 2003
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-\documentclass{article}
-\usepackage{times}
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Running title $\bullet$ May 2016 $\bullet$ Vol. XXI, No. 1} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Article Title} % Article title
+\author{%
+\textsc{John Smith}\thanks{A thank you or further information} \\[1ex] % Your name
+\normalsize University of California \\ % Your institution
+\normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent \blindtext % Dummy abstract text - replace \blindtext with your abstract text
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-% Article top matter
-\title{How to Structure a \LaTeX{} Document} %\LaTeX is a macro for printing the Latex logo
-\author{Andrew Roberts\\
-        School of Computing,\\
-		University of Leeds,\\
-		Leeds,\\
-		United Kingdom,\\
-		LS2 1HE\\
-		\texttt{andyr@comp.leeds.ac.uk}}  %\texttt formats the text to a typewriter style font
-\date{\today}  %\today is replaced with the current date
+% Print the title
 \maketitle
 
-\begin{abstract}
-In this article, I shall discuss some of the fundamental topics in
-producing a structured document.  This document itself does not go into
-much depth, but is instead the output of an example of how to implement
-structure. Its \LaTeX{} source, when in used with my tutorial
-(http://www.comp.leeds.ac.uk/andyr/misc/latex/\-latextutorial2.html)
-provides all the relevant information.  \end{abstract}
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
 
 \section{Introduction}
-This small document is designed to illustrate how easy it is to create a
-well structured document within \LaTeX\cite{lamport94}.  You should quickly be able to
-see how the article looks very professional, despite the content being
-far from academic.  Titles, section headings, justified text, text
-formatting etc., is all there, and you would be surprised when you see
-just how little markup was required to get this output.
 
-\section{Structure}
-One of the great advantages of \LaTeX{} is that all it needs to know is
-the structure of a document, and then it will take care of the layout
-and presentation itself.  So, here we shall begin looking at how exactly
-you tell \LaTeX{} what it needs to know about your document.
+\lettrine[nindent=0em,lines=3]{L} orem ipsum dolor sit amet, consectetur adipiscing elit.
+\blindtext % Dummy text
 
-\subsection{Top Matter}
-The first thing you normally have is a title of the document, as well as
-information about the author and date of publication.  In \LaTeX{} terms,
-this is all generally referred to as \emph{top matter}.
+\blindtext % Dummy text
 
-\subsubsection{Article Information}
-%Set up an 'itemize' environment to start a bulleted list.  Each
-%individual item begins with the \item command.  Also note in this list
-%that it has two levels, with a list embedded in one of the list items.
+%------------------------------------------------
+
+\section{Methods}
+
+Maecenas sed ultricies felis. Sed imperdiet dictum arcu a egestas. 
 \begin{itemize}
-	\item \texttt{\textbackslash title\{\emph{title}\}} - The title of the article.
-	\item \texttt{\textbackslash date} - The date. Use:
-		\begin{itemize}
-			\item \texttt{\textbackslash date\{\textbackslash today\}} - to get the
-			date that the document is typeset.
-			\item \texttt{\textbackslash date\{\emph{date}\}} - for a  %\emph{} emphasises the specified text.  Italics by default.
-			specific date.
-			\item \texttt{\textbackslash date\{\}} - for no date.
-		\end{itemize}
+\item Donec dolor arcu, rutrum id molestie in, viverra sed diam
+\item Curabitur feugiat
+\item turpis sed auctor facilisis
+\item arcu eros accumsan lorem, at posuere mi diam sit amet tortor
+\item Fusce fermentum, mi sit amet euismod rutrum
+\item sem lorem molestie diam, iaculis aliquet sapien tortor non nisi
+\item Pellentesque bibendum pretium aliquet
 \end{itemize}
+\blindtext % Dummy text
 
-\subsubsection{Author Information}
-The basic article class only provides the one command:
-\begin{itemize}
-	\item \texttt{\textbackslash author} - The author of the document.
-\end{itemize}
+Text requiring further explanation\footnote{Example footnote}.
 
-It is common to not only include the author name, but to insert new
-lines (\texttt{\textbackslash\textbackslash}) after and add things such
-as address and email details.  For a slightly more logical approach, use
-the AMS article class (\texttt{amsart}) and you have the following extra
-commands:
+%------------------------------------------------
 
-\begin{itemize}
-	\item \texttt{\textbackslash address} - The author's address.  Use
-	the new line command (\texttt{\textbackslash\textbackslash}) for
-	line breaks.
-	\item \texttt{\textbackslash thanks} - Where you put any acknowledgments.
-	\item \texttt{\textbackslash email} - The author's email address.
-	\item \texttt{\textbackslash urladdr} - The URL for the author's web page.
-\end{itemize}
+\section{Results}
 
-\subsection{Sectioning Commands}
-The commands for inserting sections are fairly intuitive.  Of course,
-certain commands are appropriate to different document classes.
-For example, a book has chapters but a article doesn't.
+\begin{table}
+\caption{Example table}
+\centering
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{Name} \\
+\cmidrule(r){1-2}
+First name & Last Name & Grade \\
+\midrule
+John & Doe & $7.5$ \\
+Richard & Miles & $2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-%A simple table.  The center environment is first set up, otherwise the
-%table is left aligned.  The tabular environment is what tells Latex
-%that the data within is data for the table.
-\begin{center}
-	\begin{tabular}{| l | l |} 
-	%The tabular environment is what tells Latex that the data within is
-	%data for the table.  The arguments say that there will be two
-	%columns, both left justified (indicated by the 'l', you could also
-	%have 'c' or 'r'.  The bars '|' indicate vertical lines throughout
-	%the table.
+\blindtext % Dummy text
 
-		\hline  % Print horizontal line
-		Command & Level \\ \hline  % Columns are delimited by '&'.  And
-                                   %rows are delimited by '\\'
-		\texttt{\textbackslash part\{\emph{part}\}} & -1 \\
-		\texttt{\textbackslash chapter\{\emph{chapter}\}} & 0 \\
-		\texttt{\textbackslash section\{\emph{section}\}} & 1 \\
-		\texttt{\textbackslash subsection\{\emph{subsection}\}} & 2 \\
-		\texttt{\textbackslash subsubsection\{\emph{subsubsection}\}} & 3 \\
-		\texttt{\textbackslash paragraph\{\emph{paragraph}\}} & 4 \\
-		\texttt{\textbackslash subparagraph\{\emph{subparagraph}\}} & 5 \\
-		\hline
-	\end{tabular}
-\end{center}
+\begin{equation}
+\label{eq:emc}
+e = mc^2
+\end{equation}
 
-Numbering of the sections is performed automatically by \LaTeX{}, so don't
-bother adding them explicitly, just insert the heading you want between
-the curly braces.  If you don't want sections number, then add an asterisk (*) after the
-section command, but before the first curly brace, e.g., \texttt{\textbackslash
-section*\{A Title Without Numbers\}}.
+\blindtext % Dummy text
 
-%Create the environment for the bibliography.  Since there is only one
-%reference, set the label width to be one character (I shall follow
-%convention as use the number '9'.  This is because it helps to remind
-%that it is the maximum number of refs that is now permitted by that
-%width).
-\begin{thebibliography}{9}
-%The \bibitem is to start a new reference.  Ensure that the cite_key is
-%unique.  You don't need to put each element on a new line, but I did
-%simply for readability.
-	\bibitem{lamport94}
-	  Leslie Lamport,
-	  \emph{\LaTeX: A Document Preparation System}.
-	  Addison Wesley, Massachusetts,
-	  2nd Edition,
-	  1994.
+%------------------------------------------------
 
-\end{thebibliography} %Must end the environment
+\section{Discussion}
 
-\end{document}  %End of document.
+\subsection{Subsection One}
+
+A statement requiring citation \cite{Figueredo:2009dg}.
+\blindtext % Dummy text
+
+\subsection{Subsection Two}
+
+\blindtext % Dummy text
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
