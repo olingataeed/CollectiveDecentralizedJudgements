@@ -5,16 +5,16 @@ before_install:
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
 script:
 - mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/Smart–AO.tex
-- bibtex _build/Smart–AO
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/Smart–AO.tex
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/Smart–AO.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/The-Noodle.tex
+- bibtex _build/Smart√êAO
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/The-Noodle.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build tex/The-Noodle.tex
 deploy:
   provider: releases
   api_key:
     secure: LyfzFrG/kNbs9u9kkkPf0JtZiwvxaqbIPBh3IvfLMXBRpo/dVmYAifbeMdjk5TIBbZG2UFhs4hbnqcBoW9I/UW0JnkHtvwKGMpT0OXDuzi8ley+WGsGI0QYoIpfn8AbjcfSX/fmkq3ZM4V2mxI0lIStNJxWhzF6cbbt/xeCR/T5neO43MA4XmPlSKTQCm+HyKcAfS6B/sxKZdFP3u87gpHeeyfuclJtEsQtk+n1Xrjibqfi8qlVYudZ/GWV7uOwjua17EPZzUBfUPJPBdtKjLCD2OCdofhrJ6DTl7Xk9vopl3fS9zLCe8aiqNJ96esyr51mxLhlu8AeMrt4yZ50HekRr/qqBNYuMTxsJTIsk4TnAkoAGCwdkAiLqPD0DC5hEGGuXd5j6LIKOSn3E7f/YN996gC96OLX2efCAuiotblOAEt+OgltnPRzjlKNi1Gy1lRzJjh7JPdu/J0PXyiyHQngGZG6UcLzw5Zksg61uXcrXZ+3hohaszphccNt1Nw6X2jiA4ia2fB+eurM9bjEpj+DuyZaZvXMzZA20LXnPkPQbsFmNdtlldfV0U08fZ81twST/UxSnhbowuFyljBxnX32h08rSvK8CWqO38Ms2M4BNIFDw61HlK8pRW7WfYDS0dS+p1ckLLBsewMFc7sJ15e8dABYHJ6twRskzQxcIQHA=
   file:
-  - _build/Smart–AO.pdf
+  - _build/The-Noodle.pdf
   skip_cleanup: false
   on:
     tags: true
