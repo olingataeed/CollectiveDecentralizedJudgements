@@ -13,4 +13,8 @@ deploy:
   provider: releases
   api_key:
     secure: BMApuYotVQD6gDdbo1yKfuxlDnAIozkXrs5Mz1V1aB6AXZEqrap1dNwCoEleLZbFhj4i8us4WTf0F37KFRHp4ALI1v4Gp8SUUiFsLUdHFOGgIKiUE/RJCcnEtF5tQcQQZyRrDF8GOh5bvQANj3D+JtMUJ9vrgCG0VBFUGlEK6Qyv60IgYcQnrprvu3MaJsrxoQhH8SNjGDDM3gg7QjRUIHMZDB2yBOt3NJSqYuLvh8y3ll/BtmSjknzAMQQbWd84p5qBzV9esoVv/9pX1NEzrHUZK0HYYo3rHOXzVmv1zS2v1+vgFaSSbJnUtIoG0nvlkQQiRROp7H1hAti/c3002XvS4wBdW5tIlOySwSjAzi9M/WDAMm/GtW7uHr8pySnT/Y6XxrvCr9AQK0CXJT3PZ1sAKkajVlbKt3s9CXJNkouyQV7eSEJgY+TysukOqPpAteemwRlOy6JiPzImWrUS1PecQ3bdBwxOa/BTgSrgtitH4Y7w4isgD++Y7V3+cjfZxCrI3xtd22+hGF1c7QILI4Am7vg8Eui4ZZkZJMs/KhmzpA1w8UT6CKrPHhzoPL+zV03uOgzz3XPN4SjG/b6lZCfn6xVj6/pAZ07vJfeqD6bhl/ejqqexa3B24jgG84SV6KiAuhOugJZgCpBOoSHGz6YymcC1WH71N43BM5UMGaI=
-  file: ''
+  file: 
+  - _build/CollectiveDecentralizedJudgements.pdf
+  skip_cleanup: false
+  on:
+    tags: true
